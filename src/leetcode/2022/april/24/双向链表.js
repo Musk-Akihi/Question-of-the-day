@@ -42,7 +42,9 @@ class LinkedList {
     newNode.next = cur.next;
     newNode.prev = cur;
     cur.next = newNode;
-    cur.next.prev = newNode;
+
+    newNode.next.prev = newNode;
+    // cur.next.prev = newNode; // cur吧
   }
 
   /**
