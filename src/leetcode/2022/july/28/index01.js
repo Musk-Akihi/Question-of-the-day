@@ -11,11 +11,10 @@ var findSubstring = function (s, words) {
   let wordsStrLen = wordsLen * wordsChildLen
   if (!wordsLen || sLen < wordsStrLen) return []
 
-  for (let i = 0; i < sLen; i++) {
+  for (let i = 0; i <= sLen - wordsStrLen; i++) {
     let copyWords = [...words]
     let sChild = s.slice(i, i + wordsStrLen)
     let sChildLen = sChild.length
-    if (sChildLen < wordsStrLen) break
 
     let leftIndex = 0
     let rightIndex = sChildLen - wordsChildLen
